@@ -1,0 +1,106 @@
+.Friends {
+    background-color: #2F3136;
+    height: 100vh;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    overflow-y: scroll;
+}
+.Friends::-webkit-scrollbar {
+    width: 8px;
+    height: 50px;
+}
+.Friends::-webkit-scrollbar-track {
+    background: #2F3136;
+}
+
+.Friends::-webkit-scrollbar-thumb {
+    background-color: #202225;
+    border-radius: 10px;
+    border: 1px solid #2F3136;
+}
+
+.Friend-Chat {
+    margin-top: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.Friend-Chat:hover {
+    background-color: #34373C;
+}
+
+.Friend-Chat > img {
+
+}
+.Friend-Chat > span {
+    color: #7D8186;
+    font-weight: 600;
+    margin-left: 15px;
+}
+#close {
+    display: none;
+    height: 15px;
+    margin-left: 80px;
+}
+
+.Friend-Chat:hover > #close {
+    display: block;
+}
+
+.Friends > h5 {
+    color: #7D8186;
+    margin-top: 20px;
+}
+
+.Me {
+    background-color: #292b2f;
+    position: absolute;
+    bottom: 0;
+    margin-left: -10px;
+    width: 240px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+.Me > img {
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.Me > .Me-name {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    color: #B9BBBE;
+    font-weight: bold;
+}
+
+.Me > .Me-name > label {
+    margin-left: 10px;
+}
+
+.Me > .Me-name > #me {
+    font-size: 15px;
+    color: white;
+}
+
+.Me > .buttons {
+    display: flex;
+    flex: 1;
+    justify-content: end;
+    height: 20px;
+}
+
+.me-btn {
+    border: 0px;
+    margin-right: 10px;
+}
+.me-btn > img {
+    height: 20px;
+}

@@ -1,0 +1,100 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.Server-ul {
+    overflow-y: scroll;
+}
+
+.Server-ul::-webkit-scrollbar {
+    display: none;
+}
+
+.Server-li {
+    margin: 10px 0px;
+}
+
+hr {
+    border: 1px solid #2D2F32;
+    width: 30px;
+    margin: auto;
+}
+
+.ServerBar {
+    background-color: #202225;
+    width: 70px;
+    padding: 5px 0px;
+}
+
+.ServerBar > ul {
+    height: 100vh;
+    width: 70px;
+}
+
+.Server {
+    height: 60px;
+    width: 140px;
+
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.Server .line {
+    background-color: white;
+
+    height: 8px;
+    width: 5px;
+
+    border-radius: 0px 40% 40% 0px;
+    transition: 0.3s;
+
+    position: relative;
+    right: 60px;
+}
+
+.Serverimg:hover > img {
+    border-radius: 15px;
+}
+
+.Serverimg:hover ~ .line {
+    height: 20px;
+}
+
+.Serverimg > img {
+    height: 50px;
+    margin-left: 10px;
+    background-color: #5865F2;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.Serverimg:hover ~ .name-pont {
+    display: flex;
+    align-items: center;
+}
+
+.name-pont {
+    display: none;
+    transition: 2s;
+}
+
+.pont {
+    background-color: #202225;
+    height: 10px;
+    width: 10px;
+    margin-left: 15px;
+    transform: rotate(45deg);
+}
+
+.name {
+    background-color: #202225;
+    height: 25px;
+    padding: 5px 7px;
+    margin-left: -5px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
