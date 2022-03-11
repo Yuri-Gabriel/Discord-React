@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
 import FriendList from './FriendList';
 
@@ -15,10 +15,21 @@ import './style.css';
 export default function Friends() {
 
     const [amigos, setAmigos] = useState([
-        "amigos", "amigos", "amigos", "amigos", "amigos", "amigos", "amigos", "amigos", "amigos", "amigos", "amigos", "amigos", "amigos", "amigos", "amigos", "amigos"
+        "amigo-1", "amigo-2", "amigo-3", "amigo-4", "amigo-5", "amigo-6", "amigo-7", "amigo-8", "amigo-9", "amigo-10", "amigo-11", "amigo-12", "amigo-13"
     ]);
+
     const [mutado, setMutado] = useState(false);
     const [ouvindo, setOuvindo] = useState(false);
+
+    const Apagar = (pos) => {
+        const newList = amigos;
+        newList.splice(pos, 1);
+        setAmigos(
+            newList.map((value)=>{
+                return value;
+            })
+        );
+    }
 
     return (
         <section className="Friends" >
@@ -27,33 +38,15 @@ export default function Friends() {
                 <FriendList img={Nitro} txt="Nitro" isFriend={false}/>
             </div>
             <h5>MENSAGENS DIRETAS</h5>
-            <div>
-                <FriendList img={Me} txt={"hajdah"} isFriend />
-            </div>
-            <div>
-                <FriendList img={Me} txt={"hajdah"} isFriend />
-            </div>
-            <div>
-                <FriendList img={Me} txt={"hajdah"} isFriend />
-            </div>
-            <div>
-                <FriendList img={Me} txt={"hajdah"} isFriend />
-            </div>
-            <div>
-                <FriendList img={Me} txt={"hajdah"} isFriend />
-            </div>
-            <div>
-                <FriendList img={Me} txt={"hajdah"} isFriend />
-            </div>
-            <div>
-                <FriendList img={Me} txt={"hajdah"} isFriend />
-            </div>
-            <div>
-                <FriendList img={Me} txt={"hajdah"} isFriend />
-            </div>
-            <div>
-                <FriendList img={Me} txt={"hajdah"} isFriend />
-            </div>
+            {amigos.map((value, index)=>(
+                <FriendList
+                    img={Me}
+                    txt={value}
+                    isFriend
+                    pos={index}
+                    Apagar={Apagar}
+                />
+            ))}
             <div className="Me" >
                 <img src={Me} alt="asda"/>
                 <div className="Me-name" >

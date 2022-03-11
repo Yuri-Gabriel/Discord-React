@@ -1,9 +1,52 @@
 .chat {
-    border: 1px solid red;
-    weight: 100%;
+    flex: 1;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #36393F;
+}
+
+.chat-background {
+    margin-top: -100px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
     align-items: center;
 }
-.chat-background {
+
+.chat-background > img {
+    width: 300px;
 }
+
+.chat > div > p {
+    margin-top: 30px;
+    color: #64686F;
+}
+
+.ative {
+    width: 350px;
+    height: 100%;
+    border-left: 1px solid #42454A;
+}
+
+.ative-Title {
+    width: 100%;
+    padding-top: 15px;
+    padding-left: 10px;
+    color: #fff;
+    font-size: 0.9em;
+}
+
+.ative-Msg {
+    text-align: center;
+    height: 100%;
+    padding-top: 30px;
+    color: #fff;
+}
+
+.ative-Msg > p {
+    color: #b9bbbe;
+    font-size: 0.9em;
+    margin: 10px 10px;
+}
+

@@ -3,13 +3,13 @@ header {
     background-color: #36393F;
     height: 50px;
     width: 95vw;
+    border-bottom: 2px solid #202225;
 }
 
 header > section {
     width: 72vw;
     color: white;
     font-weight: bold;
-    border-bottom: 2px solid #202225;
     display: flex;
     align-items: center;
 }
@@ -75,6 +75,8 @@ header > section > ul > hr {
     padding: 5px;
     border-radius: 5px;
     font-weight: 600;
+    display: flex;
+    align-items: center;
 }
 
 .Disponivel:hover, .Options:hover {
@@ -95,10 +97,16 @@ header > section > ul > li {
 .Add-Friend {
     background-color: #3BA55D;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
     height: 20px;
     width: max-content;
     padding: 2px 5px 4px 5px;
-    display: flex;
+    font-weight: normal;
+}
+
+.Add-Friend > span {
+    margin-top: 2px;
 }
 
 @media screen and (max-width: 940px) {

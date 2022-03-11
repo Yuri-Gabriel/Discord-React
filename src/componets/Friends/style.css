@@ -26,6 +26,7 @@
     cursor: pointer;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 10px;
     border-radius: 5px;
 }
@@ -34,21 +35,32 @@
     background-color: #34373C;
 }
 
-.Friend-Chat > img {
+.Friend-Chat:hover ~ .Friend-Chat > button {
 
 }
-.Friend-Chat > span {
+.Friend-Chat > div > span {
     color: #7D8186;
     font-weight: 600;
     margin-left: 15px;
 }
-#close {
-    display: none;
-    height: 15px;
-    margin-left: 80px;
+
+.Friend-Chat > button {
+    display: flex;
+    background-color: #2F3136;
+    border: 0px;
+    cursor: pointer;
+    width: 18px;
+}
+.Friend-Chat > button:hover {
+    background-color: #2F3136;
 }
 
-.Friend-Chat:hover > #close {
+#close {
+    width: 15px;
+    margin-right: 10px;
+}
+
+.Friend-Chat:hover > button > #close {
     display: block;
 }
 
@@ -96,6 +108,7 @@
     justify-content: end;
     height: 20px;
 }
+
 
 .me-btn {
     border: 0px;
