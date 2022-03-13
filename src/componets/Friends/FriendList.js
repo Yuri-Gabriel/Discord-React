@@ -12,7 +12,7 @@ export default function FriendList({img, txt, isFriend, pos, Apagar}) {
                     <span>{txt}</span>
                 </div>
                 {isFriend &&
-                    <button onClick={()=>Apagar(pos)} >
+                    <button title="Desfazer amizade" onClick={()=>Apagar(pos)} >
                         <img 
                         id="close" 
                         src={Close} alt=""

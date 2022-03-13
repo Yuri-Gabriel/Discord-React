@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import Search from './Search';
 import Ajuda from './Ajuda';
+import AddFriend from './AddFriend';
 
 import Me from '../img/me.png';
 import AddGrup from '../img/AddGrup.png';
@@ -11,11 +12,8 @@ import Help from '../img/Help.png';
 import './style.css';
 
 
-/*
+export default function Header({setAdd}) {
 
-*/
-
-export default function Header() {
     return (
         <header>
             <section>
@@ -49,9 +47,9 @@ export default function Header() {
                         </div>
                     </li>
                     <li>
-                        <div className="Add-Friend" >
+                        <button className="Add-Friend" onClick={()=>setAdd(true)} >
                             <span>Adicionar amigo</span>
-                        </div>
+                        </button>
                     </li>
                 </ul>
             </section>

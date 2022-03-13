@@ -35,9 +35,16 @@
     background-color: #34373C;
 }
 
-.Friend-Chat:hover ~ .Friend-Chat > button {
-
+.Friend-Chat > div {
+    display: flex;
+    align-items: center;
 }
+
+.Friend-Chat > div > img {
+    width: 30px;
+    border-radius: 50%;
+}
+
 .Friend-Chat > div > span {
     color: #7D8186;
     font-weight: 600;
@@ -45,14 +52,19 @@
 }
 
 .Friend-Chat > button {
-    display: flex;
-    background-color: #2F3136;
+    display: none;
+    background-color: #34373C;
     border: 0px;
     cursor: pointer;
     width: 18px;
 }
+
+.Friend-Chat:hover > button {
+    display: block;
+}
+
 .Friend-Chat > button:hover {
-    background-color: #2F3136;
+    background-color: #34373C;
 }
 
 #close {
@@ -113,6 +125,7 @@
 .me-btn {
     border: 0px;
     margin-right: 10px;
+    cursor: pointer;
 }
 .me-btn > img {
     height: 20px;

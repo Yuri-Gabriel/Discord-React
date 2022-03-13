@@ -50,3 +50,8 @@
     margin: 10px 10px;
 }
 
+@media screen and (max-width: 1180px) {
+    .ative {
+        display: none;
+    }
+}

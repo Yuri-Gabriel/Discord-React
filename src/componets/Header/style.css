@@ -101,12 +101,16 @@ header > section > ul > li {
     align-items: center;
     height: 20px;
     width: max-content;
-    padding: 2px 5px 4px 5px;
+    padding: 12px 8px;
     font-weight: normal;
+    border: none;
+    cursor: pointer;
 }
 
 .Add-Friend > span {
     margin-top: 2px;
+    color: #ffffff;
+    font-size: 1.2em;
 }
 
 @media screen and (max-width: 940px) {

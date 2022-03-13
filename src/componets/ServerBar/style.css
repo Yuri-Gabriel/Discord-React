@@ -5,6 +5,7 @@
 
 .Server-ul {
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .Server-ul::-webkit-scrollbar {

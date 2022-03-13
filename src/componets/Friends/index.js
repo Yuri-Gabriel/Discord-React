@@ -3,6 +3,7 @@ import React, {useState, useEffect} from 'react';
 import FriendList from './FriendList';
 
 import Me from '../img/me.png';
+import Friend from '../img/friend.png';
 import Nitro from '../img/Nitro.png';
 import MicTrue from '../img/microfone-true.png';
 import MicFalse from '../img/microfone-false.png';
@@ -12,11 +13,7 @@ import Config from '../img/config.png';
 
 import './style.css';
 
-export default function Friends() {
-
-    const [amigos, setAmigos] = useState([
-        "amigo-1", "amigo-2", "amigo-3", "amigo-4", "amigo-5", "amigo-6", "amigo-7", "amigo-8", "amigo-9", "amigo-10", "amigo-11", "amigo-12", "amigo-13"
-    ]);
+export default function Friends({amigos, setAmigos}) {
 
     const [mutado, setMutado] = useState(false);
     const [ouvindo, setOuvindo] = useState(false);
@@ -40,8 +37,8 @@ export default function Friends() {
             <h5>MENSAGENS DIRETAS</h5>
             {amigos.map((value, index)=>(
                 <FriendList
-                    img={Me}
-                    txt={value}
+                    img={Friend}
+                    txt={value.name}
                     isFriend
                     pos={index}
                     Apagar={Apagar}
