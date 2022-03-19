@@ -2,14 +2,47 @@ import React from 'react';
 import './style.css';
 
 import Background from '../img/chat-background.png';
+import addFriendBG from '../img/addFriendBG.png';
 
-export default function Chat() {
+import AddFriend from './AddFriend';
+
+export default function Chat({add, setAdd, amigos, setAmigos}) {
+
     return (
         <div className="chat" >
-            <div className="chat-background">
-                <img src={Background} alt="background" />
-                <p>Ninguem por perto para brincar com o Wumpus</p>
-            </div>
+            {add ?
+                <div className="chat-background" >
+                    <AddFriend
+                        amigos={amigos}
+                        setAmigos={setAmigos}
+                        setAdd={setAdd}
+                    />
+                    <div className="chat-ImgP" >
+                        <img
+                            src={addFriendBG}
+                            alt="background"
+                        />
+                        <p>
+                            Wumpus está esperando os amigos. Mas você não precisa esperar!
+                        </p>
+                    </div>
+                    
+                </div>
+                :
+                <div 
+                    className="chat-background"
+                    style={{justifyContent: 'center'}}
+                >
+                    <img
+                        src={Background}
+                        alt="background"
+                    />
+                    <p>
+                        Ninguem por perto para brincar com o Wumpus
+                    </p>
+                </div>
+            }
+            
             <div className="ative" >
                 <div className="ative-Title" >
                     <h2>Ativo agora</h2>

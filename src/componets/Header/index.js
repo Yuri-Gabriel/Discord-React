@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import Search from './Search';
 import Ajuda from './Ajuda';
-import AddFriend from './AddFriend';
+import AddFriend from '../Chat/AddFriend';
 
 import Me from '../img/me.png';
 import AddGrup from '../img/AddGrup.png';
@@ -12,7 +12,32 @@ import Help from '../img/Help.png';
 import './style.css';
 
 
-export default function Header({setAdd}) {
+export default function Header({setAdd, add}) {
+
+    const [btnStyle, setBtnStyle] = useState({});
+
+    useEffect(()=>{
+        if (add) {
+            setBtnStyle({
+                btn: {
+                    backgroundColor: "#36393F"
+                },
+                span: {
+                    color: "#3BA55D"
+                }
+            });
+        } else {
+            setBtnStyle({
+                btn: {
+                    backgroundColor: "#3BA55D"
+                },
+                span: {
+                    color: "#FFFFFF"
+                }
+                
+            });
+        }
+    },[add]);
 
     return (
         <header>
@@ -47,8 +72,16 @@ export default function Header({setAdd}) {
                         </div>
                     </li>
                     <li>
-                        <button className="Add-Friend" onClick={()=>setAdd(true)} >
-                            <span>Adicionar amigo</span>
+                        <button
+                            style={btnStyle.btn}
+                            className="Add-Friend"
+                            onClick={()=>setAdd(true)}
+                        >
+                            <span
+                                style={btnStyle.span}
+                            >
+                                Adicionar amigo
+                            </span>
                         </button>
                     </li>
                 </ul>

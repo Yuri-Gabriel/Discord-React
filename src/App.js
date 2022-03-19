@@ -4,12 +4,11 @@ import './App.css'
 import ServerBar from './componets/ServerBar';
 import Friends from './componets/Friends';
 import Header from './componets/Header';
-import AddFriend from './componets/Header/AddFriend';
 import Chat from './componets/Chat';
 
 function App() {
 
-  const [add, setAdd] = useState(false);
+  const [add, setAdd] = useState(true);
   const [amigos, setAmigos] = useState([{
     name: "João"
   }]);
@@ -18,19 +17,20 @@ function App() {
     <div className="App">
       <ServerBar/>
       <section>
-        <Header setAdd={setAdd} />
+        <Header setAdd={setAdd} add={add} />
         <section>
-          <Friends amigos={amigos} setAmigos={setAmigos} />
-          <Chat/>
+          <Friends
+            amigos={amigos}
+            setAmigos={setAmigos}
+          />
+          <Chat
+            amigos={amigos}
+            setAmigos={setAmigos}
+            add={add}
+            setAdd={setAdd}
+          />
         </section>
       </section>
-      {add &&
-        <AddFriend
-          amigos={amigos}
-          setAmigos={setAmigos}
-          setAdd={setAdd}
-        /> 
-      }
     </div>
   );
 }

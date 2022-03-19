@@ -1,0 +1,66 @@
+.AddFriend {
+    height: 150px;
+    border-bottom: 1px solid #42454A;
+    width: 99%;
+}
+
+.header-Add {
+    text-align: left;
+    padding: 20px 10px 10px 20px;
+    color: #fff;
+}
+
+.AddFriend > form {
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 5px 20px;
+}
+
+.AddFriend > form > div > p {
+    color: #B9BBBE;
+    font-size: 14px;
+}
+
+div#form {
+    width: 95%;
+    height: 40px;
+    margin-top: 15px;
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    background-color: #313339;
+}
+
+.input-Add {
+    width: 60%;
+    height: 30px;
+    background-color: #313339;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+}
+
+.btn-Add {
+    width: 40%;
+    height: 34px;
+    border: none;
+    background-color: #454C95;
+    color: rgba(255, 255, 255, 0.527);
+    border-radius: 5px;
+    cursor: not-allowed;
+}
+
+@media screen and (max-width: 1200px) {
+    .input-Add {
+        width: 75%;
+    }
+    .btn-Add {
+        width: 25%;
+    }
+}
